@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+    <style>
+      .container{
+        text-align: center;
+        margin-top: 150px;
+      }
+      h1{
+        font-size: 60px;
+      }
+      .count{
+        font-size: 30px;
+      }
+      .btncontain{
+        margin-top: 30px;
+      }
+      .btn-primary1{
+        margin-top: 15px;
+      }
+    </style>
+  <body>
+  <div class="container">
+      <h1>Counter</h1>
+      <div class="count"><%= counter %> times</div>
+  <div class="btncontain">
+    <form action="/increment" method="post">
+    <button class="btn-primary">Add Two Visits</button>
+    </form>
+    <form action="/clear" method="post">
+    <button class="btn-primary1">Reset</button>
+    </form>
+  </div>
+  </div>
+  </body>
+</html>
