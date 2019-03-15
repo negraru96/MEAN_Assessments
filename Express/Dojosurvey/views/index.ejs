@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv"X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .btn-primary{
+      margin-left: 45%;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Californian Residential Physical Activities Form</h1>
+      <form action='/results' method='post'>
+      <div class="form-group">
+        Name: <input class="form-control" type="text" name="name" value=""  placeholder="Name">
+      </div>
+      <div class="form-group">
+        Email: <input class="form-control" type="text" name="email" value="" placeholder="Email" />
+      </div>
+      <div class="form-group">
+        City: <select class="form-control" type="text" name="city" value="" placeholder="City">
+          <option>Select Option</option>
+          <option>Sacramento</option>
+          <option>San Diego</option>
+          <option>Los Angeles</option>
+          <option>San Francisco</option>
+          <option>San Jose</option>
+          <option>Fresno</option>
+          <option>Oakland</option>
+          <option>Long Beach</option>
+          <option>Bakersfield</option>
+          <option>Anaheim</option>
+          <option>Riverside</option>
+          <option>Pasadena</option>
+          <option>Santa Barbara</option>
+          <option>Santa Monica</option>
+          <option>Carlsbad</option>
+          <option>Burbank</option>
+          <option>Newport Beach</option>
+        </select>
+      </div>
+      <div class="form-group">
+        Activity: <select class="form-control" type="text" name="activity" value="" placeholder="Activity">
+          <option>Select Option</option>
+          <option>Biking</option>
+          <option>Hiking</option>
+          <option>Surfing</option>
+          <option>Diving</option>
+          <option>Rowing</option>
+        </select>
+      </div>
+      <div class="form-group">
+        If Other: <textarea class="form-control" type="text" name="other" placeholder="Other" rows="3"></textarea>
+      </div>
+      <input class="btn btn-primary" type="Submit" value="Submit" />
+    </form>
+  </body>
+</html>
