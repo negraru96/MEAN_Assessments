@@ -1,0 +1,22 @@
+~ Make the front-end pages and tamper with what a user box display would look like (base route '/' info input box and user box on
+rendered page). HTML/CSS/jquery components.
+
+~ Start code in Node. The server will render the views/index.ejs file whenever a request for base route '/' will be requested.
+
+~ As the user box displays, make a funct in which the user input gets stored. call var "name".
+
+~ upon user submit, have client-side emit a new var "got_new_user". Pass existing var "name" to server.
+
+~ server listens for an event "got_new_user". When the event gets triggered:
+  1. server broadcasts an event "new_user" to clients with name of new user.
+  2. store name/session_id of new user in a var/arr/# called users.
+  3. To user who sent a request, emit event "existing_users" with all user data.
+
+~ client-side listens for event "new_user". Have all information passed get rendered. Rendering via jquery in HTML.
+
+~ Server listens for an event "disconnect". When event gets triggered upon user disconnecting:
+  1. server broadcasts event "dc_user" to clients with users currently on platform.
+  2. storage removes the name of disconnected user(s) using event "disconnect".
+  3. emit event "existing_users" to all user data.
+
+~ client-side listens for event "dc_user" and when event gets triggered: client-side removes the appropriate user data jquery box.

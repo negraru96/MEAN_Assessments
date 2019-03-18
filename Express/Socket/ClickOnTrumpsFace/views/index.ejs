@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+$(document).ready(function () {
+      var socket = io.connect();
+
+      $('#btn').click(function () {
+          socket.emit('button1');
+        });
+
+      $('#reset').click(function () {
+            socket.emit('reset');
+          });
+
+      socket.on('button_message', function (data) {
+        $('#count').html(data.count);
+      });
+
+    });
+    </script>
+    <style>
+    .wrapper{
+      background-color: black;
+      opacity: 0.8;
+      width: 80%;
+      height: 93%;
+      position: fixed;
+      margin-top: 2%;
+      margin-left: 10%;
+    }
+      h1{
+        margin-top: 2%;
+        text-align: center;
+        color: white;
+      }
+      h3{
+        color: white;
+      }
+      .container{
+        text-align: center;
+        margin-top: 4%;
+      }
+      #btn{
+        display: inline-block;
+        position: absolute;
+        margin-top: 2%;
+        background-color: black;
+        height: 60%;
+        margin-left: -15%;
+      }
+      .area{
+        cursor: url("banana.png"), auto;
+      }
+      #reset{
+        display: inline-block;
+        margin-top: 41%;
+        margin-left: 42%;
+        font-size: 30px;
+        color: white;
+        background-color: red;
+      }
+    </style>
+ </head>
+  <body>
+    <div id='header'></div>
+    <div class="wrapper">
+    <h1>Trump's Face has been pushed <span id="count">0</span> time(s)!</h1>
+      <div class="container">
+        <h3>Push Trump's Face!</h3>
+        <div class="area">
+          <img src="image.png" id="btn" alt="test">
+        </div>
+      </div>
+
+
+      <input type="submit" id="reset" value="Reset count"></input>
+
+    </div>
+  </body>
+</html>
