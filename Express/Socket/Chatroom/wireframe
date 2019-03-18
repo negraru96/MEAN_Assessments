@@ -3,20 +3,81 @@ rendered page). HTML/CSS/jquery components.
 
 ~ Start code in Node. The server will render the views/index.ejs file whenever a request for base route '/' will be requested.
 
-~ As the user box displays, make a funct in which the user input gets stored. call var "name".
+                app.get('/', function (request, response) {
+                          response.render('index', {});
+                        });
+
+~ As the user box displays, make a funct that asks the user for their name the user input gets stored in var "name".
+
+                  <script>
+                      var name = prompt("What is your name?");
+                  </script>
 
 ~ upon user submit, have client-side emit a new var "got_new_user". Pass existing var "name" to server.
 
+                  <script>
+                      var name = prompt("What is your name?");
+                      io = io.connect();
+                      io.emit('got_new_user', { name: name });
+                  </script>
+
 ~ server listens for an event "got_new_user". When the event gets triggered:
   1. server broadcasts an event "new_user" to clients with name of new user.
+
+                  <script>
+                      app.io.route('got_new_user', function(request) {
+
+                          app.io.broadcast('new_user', {new_user_name: req.data.name});
+                      });
+                  </script>
+
   2. store name/session_id of new user in a var/arr/# called users.
+
+                <script>
+                    var users = {};
+                    users[session_id];
+                </script>
+
   3. To user who sent a request, emit event "existing_users" with all user data.
+
+                <script>
+                    app.io.route('got_new_user', function(request) {
+
+                        app.io.broadcast('new_user', {new_user_name: req.data.name});
+
+                        req.io.emit('existing_users', users);
+                    });
+                </script>
 
 ~ client-side listens for event "new_user". Have all information passed get rendered. Rendering via jquery in HTML.
 
+                <script>
+                    var name = prompt("What is your name?");
+                    io = io.connect();
+                    io.emit('got_new_user', { name: name });
+
+                    io.on('new_user', function(data)){
+                        //HTML
+                    }
+                </script>
+
 ~ Server listens for an event "disconnect". When event gets triggered upon user disconnecting:
-  1. server broadcasts event "dc_user" to clients with users currently on platform.
-  2. storage removes the name of disconnected user(s) using event "disconnect".
-  3. emit event "existing_users" to all user data.
+  1. server broadcasts event "dc_user" to clients with users currently on platform. Data display is of disconnected user(s).
+
+              app.io.route('disconnect', function(request) {
+
+                  app.io.broadcast('dc_user', {req.data.session_id})
+              })
 
 ~ client-side listens for event "dc_user" and when event gets triggered: client-side removes the appropriate user data jquery box.
+
+                <script>
+                    var name = prompt("What is your name?");
+                    io = io.connect();
+                    io.emit('got_new_user', { name: name });
+
+                    io.on('new_user', function(data)){
+                        //HTML
+                    }
+                    io.on('dc_user', function(data.destroy));
+                </script>
