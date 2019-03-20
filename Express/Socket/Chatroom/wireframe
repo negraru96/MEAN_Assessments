@@ -1,7 +1,4 @@
-~ Make the front-end pages and tamper with what a user box display would look like (base route '/' info input box and user box on
-rendered page). HTML/CSS/jquery components.
-
-~ Start code in Node. The server will render the views/index.ejs file whenever a request for base route '/' will be requested.
+~ Start code in Node. The server will render the views/index.ejs file whenever a request for base route '/' will be requested. Add requires.
 
                 app.get('/', function (request, response) {
                           response.render('index', {});

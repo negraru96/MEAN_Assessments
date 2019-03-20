@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Group Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var username = prompt('what is your name?');
+        var socket = io.connect();
+        var name;
+
+        if (username) {
+          $('#header').show();
+          name = username;
+          console.log('name:' + name);
+          socket.emit('new_user', {
+            name: name,
+          });
+
+          $('#forms').submit(function () {
+            socket.emit('createmessage', {
+              message: $('#message').val(),
+              name: name,
+            });
+            $('#input').val('');
+            return false;
+          });
+
+          socket.on('updated_message', function (data) {
+            $('#messages').append('<p>' + data.name + ': ' + data.message + '</p>');
+          });
+        } else if (username == '') {
+          alert('A name must be entered. Webpage will reload after pressing ok');
+          location.reload();
+        }
+      });
+    </script>
+    <style>
+      #header{
+        text-align: center;
+        background-color: black;
+        color: white;
+        width: 70%;
+        margin-left: 15%;
+      }
+      #message{
+        text-align: center;
+      }
+      #sendbutton{
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" hidden>
+      <form id="forms">
+        <h1>Conversation Board</h1>
+        <div id="messages">
+          <% for (var x in key) { %>
+            <p><%= key[x].name %>:<%= key[x].message %></p>
+          <% } %>
+        </div>
+
+    <input id='message' type='text' name='message'>
+    <button id='sendbutton'>Send</button>
+      </form>
+    </div>
+  </body>
+</html>
