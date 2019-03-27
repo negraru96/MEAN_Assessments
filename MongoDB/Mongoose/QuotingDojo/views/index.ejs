@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <title>What's Your Quote!</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    h1{
+      margin-top: 50px;
+      margin-left: 500px;
+    }
+    .fname{
+      display: inline-block;
+      margin-top: 100px;
+      margin-left: 350px;
+      font-size: 35px;
+    }
+    .qname{
+      display: inline-block;
+      margin-top: 70px;
+      margin-left: 350px;
+      font-size: 35px;
+    }
+    .container2{
+      margin-top: 30px;
+      margin-left: 500px;
+    }
+    .add{
+      background-color: green;
+      color: white;
+      width: 200px;
+      height: 45px;
+    }
+    .skip{
+      background-color: blue;
+      color: white;
+      width: 200px;
+      height: 45px;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>What's Your Quote?!</h1>
+   <div class="fname">
+    <form action="/add" method="post">
+      Your name: <input id= 'name' type='text' placeholder='Name' name= 'name'>
+   </div>
+   <div class="qname">
+      Your quote: <textarea id='quote' type='text' placeholder='Your quote' name= 'line' rows='3'></textarea>
+   </div>
+    </div>
+    <div class='container2'>
+      <button class="add" type="submit" name="Submit">Add my quote!</button>
+      <button class="skip" type="submit" name="Submit" href="/quotes">Skip to quotes!</button>
+    </div>
+    </form>
+   </div>
+  </body>
+</html>

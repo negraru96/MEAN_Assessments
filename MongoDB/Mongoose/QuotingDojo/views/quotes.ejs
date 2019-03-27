@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <title>Quote Display</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    h1{
+      margin-top: 50px;
+      margin-left: 480px;
+    }
+    h4{
+      margin-top: 50px;
+      text-align: center;
+    }
+    h3{
+      margin-top: 10px;
+      text-align: center;
+    }
+    a{
+      text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Here are the Submitted Quotes!</h1>
+    <% for (var x in arr) { %>
+        <h4>"<%= arr[x].line %>"</h4>
+        <h3>-<%= arr[x].name %> at <%=arr[x].updatedAt%></h3>
+        <hr>
+    <% } %>
+    <a href='/'>Add another quote</a>
+  </body>
+</html>
