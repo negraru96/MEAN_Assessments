@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <title>Sharks Render All</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    h1{
+      text-align: center;
+      margin-top: 50px;
+    }
+    .shark1{
+      display: inline-block;
+      margin-top: 60px;
+      margin-left: 520px;
+      height: 350px;
+    }
+    .cshark1{
+      display: inline-block;
+      position: absolute;
+      top: 70%;
+      left: 38%;
+    }
+    .edit1{
+      background-color: green;
+      color: white;
+      height: 50px;
+      width: 200px;
+    }
+    .destroy1{
+      background-color: red;
+      color: white;
+      height: 50px;
+      width: 100px;
+    }
+    .cshark2{
+      display: inline-block;
+      position: absolute;
+      top: 55%;
+      vertical-align: top;
+    }
+    .edit2{
+      background-color: green;
+      color: white;
+      height: 50px;
+      width: 200px;
+    }
+    .destroy2{
+      background-color: red;
+      color: white;
+      height: 50px;
+      width: 100px;
+    }
+    .shark2{
+      display: inline-block;
+      margin-top: 130px;
+      margin-left: 400px;
+      height: 350px;
+    }
+    .CreateTitle{
+      position: absolute;
+      display: inline-block;
+      top: 71%;
+    }
+    .newForm{
+      display: inline-block;
+      margin-top: 700px;
+      margin-left: -250px;
+    }
+    .sub{
+      margin-top: 30px;
+      margin-left: 400px;
+    }
+    .placeholder{
+      position: absolute;
+      display: inline-block;
+      top: 200%;
+    }
+  </style>
+  </head>
+  <body>
+    <h4 class='placeholder'>..</h4>
+    <h1>Sharks!</h1>
+      <img src="shark1.png" class="shark1">
+      <img src="shark2.png" class="shark2">
+
+  <div class="cshark1">
+    <form>
+      <input type='submit' name='edit' value="View Stats/ Edit" class='edit1'>
+    <form action='/destroy'>
+      <input type='submit' name='destroy' class='destroy1' value='Remove'>
+  <div>
+
+  <div class="cshark2">
+    <form>
+      <input type='submit' name='edit' value="View Stats/ Edit" class='edit2'>
+    <form action='/destroy'>
+      <input type='submit' name='destroy' class='destroy2' value='Remove'>
+  </div>
+
+  <h1 class='CreateTitle'> Create a New Shark </h1>
+  <div class='newForm'>
+    <form action='/create' method='post'>
+      Name: <input type='text' name='name' placeholder='Insert Name'>
+      Weight: <input type='text' name='weight' placeholder='Insert Weight'>
+      Color: <input type='text' name='color' placeholder='Insert Color'>
+      Location: <input type='text' name='location' placeholder='Insert Location'>
+      <button class='sub' type='submit' value='Submit'>Add<button>
+    </form>
+  </div>
+  </body>
+</html>

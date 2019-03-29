@@ -1,0 +1,5 @@
+Make base route '/' show all existing sharks. Add button display under sharks.
+
+Make a form on base route '/' which allows user to create a new Shark.
+
+Upon submit, have the inputted information posted

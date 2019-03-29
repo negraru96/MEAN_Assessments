@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <h1>Edit shark <%=shar.name%></h1>
+        <form action="/change/<%=shar._id%>" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" value="<%=shar.name%>"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>Color:</td>
+                    <td><input type="text" name="color" value="<%=shar.color%>"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>Weight:</td>
+                    <td><input type="text" name="weight" value="<%=shar.weight%>"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>Location:</td>
+                    <td><input type="text" name="location" value="<%=shar.location%>"></td>
+                </tr>
+                <br>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <form action="/delete/<%=shar._id%>" method="post">
+            <input type="submit" value="DELETE THIS SHARK">
+        </form>
+    </body>
+    <% if(typeof(errors) != 'undefined' ) { %>
+        <span style="color: red">Something went wrong</span>
+        <p><%= errors%></p>
+        <% for (var x in errors) { %>
+            <h3><%= errors[x].messages %></h3>
+        <% } %>
+    <% } %>
+</html>

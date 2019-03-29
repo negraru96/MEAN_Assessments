@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <body>
+        <h1>Here are the Sharks</h1>
+        <% for (var x in arr) { %>
+          <p>Shark's json:<%= arr[x] %></p>
+          <p>Shark's name:<%= arr[x].name %></p>
+          <p>Shark's weight:<%= arr[x].weight %></p>
+          <p>Shark's color:<%= arr[x].color %></p>
+          <p>Shark's location:<%= arr[x].location %></p>
+          <a href='sharks/<%= arr[x]._id%>'>check this out</a>
+          <hr>
+        <% } %>
+        <a href='/sharks/new'>Add another Shark</a>
+  </body>
+</html>
