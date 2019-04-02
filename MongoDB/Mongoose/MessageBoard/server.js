@@ -4,9 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-
-mongoose.connect('mongodb/localhost/basic_mongo', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/messageBoard', { useNewUrlParser: true });
 var Schema = mongoose.Schema;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,7 +30,7 @@ var Comment = mongoose.model('Comment');
 
 app.post('/newMessage', function(req,res){
   var newMessage = new Message(req.body);
-  new_message.save(function(err){
+  newMessage.save(function(err){
     if(err)
     res.json(err);
     else {

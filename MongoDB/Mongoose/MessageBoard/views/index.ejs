@@ -17,7 +17,7 @@
    }
    .containercomment{
      margin-left: 450px;
-     margin-top: 300px;
+     margin-top: 100px;
    }
    .p{
      margin-top: 100px;
@@ -26,6 +26,12 @@
    .btn{
      background-color: black;
      color: white;
+   }
+   .message-content{
+     display: inline-block;
+     font-size: 35px;
+     margin-left: 500px;
+     margin-top: 50px;
    }
  </style>
   <body>
@@ -54,9 +60,13 @@
     </div>
     </form>
 
-    <% for (var i in messages) {
+    <div id="comments"></div>
+
+    <% for (var i in messages) { %>
+    <div class='message-content'>
       <p>Name: <%= messages[i].name %></p>
       <p>Message: <%= messages[i].message %></p>
+    </div>
       <% if (messages[i].comments) { %>
         <% for (j in messages[i].comment) { %>
           <p>Name: <%= messages[i].comments[j].name %></p>
@@ -89,7 +99,7 @@
 
     <% } %>
   <% } %>
-  
+
       <p class="p">..</div>
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
