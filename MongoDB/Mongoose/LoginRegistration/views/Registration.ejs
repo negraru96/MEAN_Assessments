@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+ <link rel="icon" href="../image/favicon.ico">
+ <link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>document.title = "Register | Maik Photography"</script>
+ <style>
+
+ body{
+   background-color: black;
+ }
+ .navbar{
+   overflow: visible;
+   background-color: black;
+   position: fixed;
+   top: 0;
+   width: 100%;
+ }
+ .navbar-toggler-icon{
+   background-color: black;
+ }
+ .burgr1{
+   background-color: #ffcc00;
+   position: absolute;
+   display: inline-block;
+   height: 5px;
+   width: 23px;
+   margin-top: 3px;
+   margin-left: -12px;
+ }
+ .burgr2{
+   background-color: #ffcc00;
+   position: absolute;
+   display: inline-block;
+   height: 5px;
+   width: 23px;
+   margin-top: 12px;
+   margin-left: -12px;
+ }
+ .burgr3{
+   background-color: #ffcc00;
+   position: absolute;
+   display: inline-block;
+   height: 5px;
+   width: 23px;
+   margin-left: -12px;
+   margin-top: 21px;
+ }
+ .nav-link{
+   color:white !important;
+   margin: 10px;
+   margin-left: 90px;
+   font-family: 'Cantarell', sans-serif;
+   font-size: 17px;
+ }
+ .nav-link:nth-child(2):hover ~ .line{
+   transform:translate(120px);
+ }
+ .dropdown-menu{
+   background-color: black;
+ }
+ .dropdown-item{
+   color: #ffcc00;
+   font-family: 'Cantarell', sans-serif;
+   font-size: 17px;
+ }
+ .lblpass{
+   color: #ffcc00;
+   font-family: 'Cantarell', sans-serif;
+   display: inline-block;
+ }
+ .lbluser{
+   color: #ffcc00;
+   font-family: 'Cantarell', sans-serif;
+ }
+ .btn{
+   background-color: #ffcc00;
+   font-family: 'Cantarell', sans-serif;
+   color: black;
+   margin-left: 28%;
+   margin-top: 6%;
+   box-shadow: 1px 1px 20px #ffcc00;
+ }
+ .form-control{
+   width: 350px;
+   font-family: 'Cantarell', sans-serif;
+   color: black;
+   box-shadow: 1px 1px 20px #ffcc00;
+ }
+ .form-row2{
+   margin-top: 5%;
+   margin-left: -4%;
+ }
+ .form-row3{
+   margin-top: 10%;
+   margin-left: -4%;
+ }
+ .wrapper{
+   background-color: black;
+   position: fixed;
+   border-style: groove;
+   border-width: thick;
+   border-color: #ffcc00;
+   width: 30%;
+   height: 75%;
+   margin-left: 35%;
+   margin-top: 10%;
+ }
+ .containermessage{
+   display: inline-block;
+   margin-top: 30%;
+   margin-left: 8%;
+ }
+ h1{
+   display: inline-block;
+   position: absolute;
+   color: white;
+   margin-left: 10%;
+   margin-top: 6%;
+   letter-spacing: 10px;
+   font-size: 60px;
+   font-family: 'Sarala', sans-serif;
+ }
+ .invalid-feedback{
+      font-family: 'Cantarell', sans-serif;
+      font-size: 12px;
+      margin-top: 10px;
+ }
+ </style>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-black bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <div class="burgr1"></div>
+        <div class="burgr2"></div>
+        <div class="burgr3"></div>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-tem active">
+        <a class="nav-link w3-button w3-hover-black w3-border-black w3-hover-text-yellow w3-bottombar w3-hover-border-yellow" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-tem">
+        <a class="nav-link w3-button w3-hover-black w3-hover-text-yellow w3-border-black w3-bottombar w3-hover-border-yellow" href="bio2.html">Bio</a>
+      </li>
+      <li class="nav-tem dropdown">
+        <a class="nav-link dropdown-toggle w3-button w3-hover-black w3-hover-text-yellow w3-border-black w3-bottombar w3-hover-border-yellow" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gallery
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="people2.html">People</a>
+          <a class="dropdown-item" href="events2.html">Events</a>
+          <a class="dropdown-item" href="landscape2.html">Landscape</a>
+          <a class="dropdown-item" href="food2.html">Food</a>
+        </div>
+      </li>
+      <li class="nav-tem">
+        <a class="nav-link w3-button w3-hover-black w3-hover-text-yellow w3-border-black w3-bottombar w3-hover-border-yellow" href="servicesSU.html">Services</a>
+      </li>
+      <li class="nav-tem">
+        <a class="nav-link w3-button w3-hover-black w3-hover-text-yellow w3-border-black w3-bottombar w3-hover-border-yellow" href="ContactMe.html">Contact Me</a>
+      </li>
+      <li class="nav-tem">
+        <a class="nav-link w3-button w3-hover-black w3-hover-text-yellow w3-border-black w3-bottombar w3-hover-border-yellow">Login</a>
+      </li>
+    </ul>
+    </div>
+    </nav>
+  <div class="wrapper">
+    <h1>REGISTER</h1>
+    <div class='containermessage'>
+        <form class="needs-validation" action="/newMessage" method="post" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label class="lbluser" for="validationCustom01">Username</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Username" name="name" required>
+          <div class="invalid-feedback">
+            Type a Username.
+          </div>
+        </div>
+      </div>
+      <div class="form-row2">
+        <div class="col-md-6 mb-3">
+          <label class="lblpass" for="validationCustom03">Password</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="Password" name="message" required>
+          <div class="invalid-feedback">
+            Type a Password.
+          </div>
+        </div>
+      </div>
+      <div class="form-row3">
+        <div class="col-md-6 mb-3">
+          <label class="lblpass" for="validationCustom03">Confirm Your Password</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="Password" name="message" required>
+          <div class="invalid-feedback">
+            Type a Password.
+          </div>
+        </div>
+      </div>
+      <button class="btn" type="submit">Create Account</button>
+    </div>
+    </form>
+  </div>
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+  </body>
+</html>
