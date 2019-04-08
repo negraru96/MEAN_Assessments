@@ -1,0 +1,232 @@
+body{
+  background-color: black;
+}
+.navbar{
+  overflow: visible;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar-toggler-icon{
+  background-color: black;
+}
+.burgr1{
+  background-color: #ffcc00;
+  position: absolute;
+  display: inline-block;
+  height: 5px;
+  width: 23px;
+  margin-top: 3px;
+  margin-left: -12px;
+}
+.burgr2{
+  background-color: #ffcc00;
+  position: absolute;
+  display: inline-block;
+  height: 5px;
+  width: 23px;
+  margin-top: 12px;
+  margin-left: -12px;
+}
+.burgr3{
+  background-color: #ffcc00;
+  position: absolute;
+  display: inline-block;
+  height: 5px;
+  width: 23px;
+  margin-left: -12px;
+  margin-top: 21px;
+}
+.nav-link{
+  color:white !important;
+  margin: 10px;
+  margin-left: 90px;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 17px;
+}
+.nav-link:nth-child(2):hover ~ .line{
+  transform:translate(120px);
+}
+.dropdown-menu{
+  background-color: black;
+}
+.dropdown-item{
+  color: #ffcc00;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 17px;
+}
+.lblpass{
+  color: #ffcc00;
+  font-family: 'Cantarell', sans-serif;
+  text-align: center;
+  display: inline-block;
+}
+.lbluser{
+  color: #ffcc00;
+  font-family: 'Cantarell', sans-serif;
+  text-align: center;
+  display: inline-block;
+}
+.btnreg{
+  background-color: #ffcc00;
+  font-family: 'Cantarell', sans-serif;
+  color: black;
+  height: 40px;
+  width: 150px;
+  margin-left: 25%;
+  margin-top: 20%;
+  box-shadow: 1px 1px 20px #ffcc00;
+  border-color: #ffcc00;
+  border-radius: 5px;
+}
+.btn{
+  background-color: #ffcc00;
+  font-family: 'Cantarell', sans-serif;
+  color: black;
+  margin-left: 34%;
+  margin-top: 12%;
+  box-shadow: 1px 1px 20px #ffcc00;
+}
+.form-control{
+  width: 350px;
+  font-family: 'Cantarell', sans-serif;
+  color: black;
+  font-size: 16px;
+  box-shadow: 1px 1px 20px #ffcc00;
+}
+.form-row2{
+  margin-top: 4%;
+  margin-left: -4%;
+}
+.form-row3{
+  margin-top: 8%;
+  margin-left: -4%;
+}
+.wrapper{
+  background-color: black;
+  position: fixed;
+  border-style: groove;
+  border-width: thick;
+  border-color: #ffcc00;
+  width: 30%;
+  height: 54%;
+  margin-left: 15%;
+  margin-top: 15%;
+}
+.wrapper1{
+  background-color: black;
+  position: fixed;
+  border-style: groove;
+  border-width: thick;
+  border-color: #ffcc00;
+  width: 30%;
+  height: 70%;
+  margin-left: 55%;
+  margin-top: 12%;
+}
+.containermessage{
+  display: inline-block;
+  margin-top: 27%;
+  margin-left: 8%;
+}
+h1{
+  display: inline-block;
+  position: absolute;
+  color: white;
+  margin-left: 25%;
+  margin-top: 6%;
+  letter-spacing: 10px;
+  font-size: 60px;
+  font-family: 'Sarala', sans-serif;
+}
+.reg{
+  display: inline-block;
+  position: absolute;
+  color: white;
+  margin-left: 10%;
+  margin-top: 6%;
+  letter-spacing: 10px;
+  font-size: 60px;
+  font-family: 'Sarala', sans-serif;
+}
+.invalid-feedback{
+  position: absolute;
+     font-family: 'Cantarell', sans-serif;
+     font-size: 12px;
+     margin-top: 10px;
+}
+.register{
+ display: inline-block;
+ position: absolute;
+ font-size: 15px;
+ color: white;
+ font-family: 'Cantarell', sans-serif;
+ margin-left: 22%;
+ margin-top: 11%;
+}
+.login{
+ display: inline-block;
+ position: absolute;
+ font-size: 15px;
+ color: white;
+ font-family: 'Cantarell', sans-serif;
+ margin-left: 61%;
+ margin-top: 8%;
+}
+.emailstyle{
+  position: absolute;
+  color: red;
+     font-family: 'Cantarell', sans-serif;
+     font-size: 12px;
+     margin-top: 40px;
+}
+.passstyle{
+  position: absolute;
+  color: red;
+     font-family: 'Cantarell', sans-serif;
+     font-size: 12px;
+     margin-top: 40px;
+}
+#regstyle{
+  position: absolute;
+  color: red;
+     font-family: 'Cantarell', sans-serif;
+     font-size: 12px;
+     margin-top: 40px;
+}
+.logstyle{
+  position: absolute;
+  color: red;
+     font-family: 'Cantarell', sans-serif;
+     font-size: 12px;
+     margin-top: 40px;
+}
+
+#pass{
+margin-top: 45%;
+margin-left: 58%;
+position: absolute;
+display: inline-block;
+color: red;
+font-size: 12px;
+font-family: 'Cantarell', sans-serif;
+}
+#one{
+  margin-top: 40.5%;
+  margin-left: 56%;
+  position: absolute;
+  display: inline-block;
+  color: red;
+  font-size: 12px;
+  font-family: 'Cantarell', sans-serif;
+}
+#two{
+  margin-top: 35.5%;
+  margin-left: 18%;
+  position: absolute;
+  display: inline-block;
+  color: red;
+  font-size: 12px;
+  font-family: 'Cantarell', sans-serif;
+}
